@@ -1,8 +1,10 @@
 from flask import Flask,render_template,redirect,request,url_for
-import pickle
+
 import numpy as np
 
-model=pickle.load(open('auto_mpg.pkl','rb'))
+from joblib import load
+
+model = load('filename.joblib') 
 
 
 app=Flask(__name__)
